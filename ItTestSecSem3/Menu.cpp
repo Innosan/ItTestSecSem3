@@ -4,6 +4,8 @@
 #include "Menu.h"
 #include "MenuOption.h"
 #include "utils.h"
+#include "files.h"
+#include "validation.h"
 #include "inputs.h"
 #include "LongestSubstring.h"
 
@@ -29,7 +31,14 @@ void Menu::initializeMenu() {
 
 		// Read from file
 		MenuOption(this->READ_FROM_FILE, "Read texts from files",  []() {
-			// TODO: Implement
+			string firstFilePath = getValidFilePath();
+			string secondFilePath = getValidFilePath();
+
+			vector<string> firstFileText = getTextFromFile(firstFilePath);
+			vector<string> secondFileText = getTextFromFile(secondFilePath);
+
+			auto result = LongestSubstring::getLongestSubstring(convertToString(firstFileText), convertToString(secondFileText));
+			result.print();
 		}),
 
 		// Exit

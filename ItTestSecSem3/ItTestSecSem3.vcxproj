@@ -127,19 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="files.cpp" />
     <ClCompile Include="ItTestSecSem3.cpp" />
     <ClCompile Include="LongestSubstring.cpp" />
     <ClCompile Include="inputs.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuOption.cpp" />
     <ClCompile Include="utils.cpp" />
+    <ClCompile Include="validation.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="files.h" />
     <ClInclude Include="inputs.h" />
     <ClInclude Include="LongestSubstring.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MenuOption.h" />
     <ClInclude Include="utils.h" />
+    <ClInclude Include="validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

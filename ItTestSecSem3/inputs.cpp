@@ -31,3 +31,12 @@ std::vector<std::string> getMultilineString(std::string welcomeMessage) {
 
     return lines;
 }
+
+std::string getStringUserInput(std::string welcomeMessage) {
+	std::string input = "";
+	std::cout << welcomeMessage << std::endl;
+
+	std::cin >> input;
+
+	return input;
+}

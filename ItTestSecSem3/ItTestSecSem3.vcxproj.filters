@@ -13,42 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{de2363bd-6da2-45b2-8264-062c4a62696a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{56bd72a4-9f0b-4e81-b25c-c6d14d11548c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models">
+      <UniqueIdentifier>{713ad03b-b881-4023-b6e6-8e0e3a45b49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Models\LongestSubstring">
+      <UniqueIdentifier>{7b5e3bd2-d1ae-4461-8005-ef456eed9b5f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ItTestSecSem3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="LongestSubstring.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="inputs.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="utils.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Menu.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Menu</Filter>
     </ClCompile>
     <ClCompile Include="MenuOption.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="inputs.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestSubstring.cpp">
+      <Filter>Models\LongestSubstring</Filter>
+    </ClCompile>
+    <ClCompile Include="files.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="validation.cpp">
+      <Filter>Utility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LongestSubstring.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="utils.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="inputs.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Menu.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Menu</Filter>
     </ClInclude>
     <ClInclude Include="MenuOption.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="inputs.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestSubstring.h">
+      <Filter>Models\LongestSubstring</Filter>
+    </ClInclude>
+    <ClInclude Include="files.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="validation.h">
+      <Filter>Utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

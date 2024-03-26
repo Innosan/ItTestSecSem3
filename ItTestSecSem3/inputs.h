@@ -16,3 +16,12 @@
 int getIntUserInput(std::string welcomeMessage, int min = 0, int max = INT_MAX);
 
 std::vector<std::string> getMultilineString(std::string welcomeMessage);
+
+/**
+ * \brief Get string user input.
+ *
+ * \param welcomeMessage - message to display to the user
+ *
+ * \return string user input
+ */
+std::string getStringUserInput(std::string welcomeMessage);
