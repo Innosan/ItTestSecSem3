@@ -21,6 +21,12 @@ bool isFilePathValid(const string& filePath) {
 }
 
 bool isFileNameValid(const string& fileName) {
+	string lowerCased = fileName;
+
+	for (auto& x : lowerCased) {
+		x = static_cast<char>(tolower(x));
+	}
+
 	// Regular expression to match a valid file name
 	regex fileNameRegex("^[^\\/:*?\"<>|]+\\.txt$");
 	// Regular expression to match reserved file names in Windows
@@ -28,17 +34,17 @@ bool isFileNameValid(const string& fileName) {
 	// Regular expression to match reserved characters in Windows file names
 	regex fileNameReservedChars("[\\/:*?\"<>|]");
 
-	if (!regex_match(fileName, fileNameRegex)) {
+	if (!regex_match(lowerCased, fileNameRegex)) {
 		cerr << "Error: Invalid file name." << endl;
 		return false;
 	}
 
-	if (regex_match(fileName, fileNameReservedNames)) {
+	if (regex_match(lowerCased, fileNameReservedNames)) {
 		cerr << "Error: Invalid file name. Using reserved filenames is prohibited!" << endl;
 		return false;
 	}
 
-	if (regex_search(fileName, fileNameReservedChars)) {
+	if (regex_search(lowerCased, fileNameReservedChars)) {
 		cerr << "Error: Invalid file name. Using reserved characters is prohibited!" << endl;
 		return false;
 	}
@@ -47,19 +53,22 @@ bool isFileNameValid(const string& fileName) {
 }
 
 string getValidFilePath() {
-	bool isPathValid = false;
-	bool isNameValid = false;
-
 	string filename = "";
 	string filepath = "";
 
-	while (!isPathValid && !isNameValid) {
+	while (true) {
 		filename = getStringUserInput("Input filename (only txt acceptable): ");
-		filepath = getStringUserInput("Input full path to path: ");
 
-		if (isFilePathValid(filepath + filename) && isFileNameValid(filename)) {
-			isPathValid = true;
-			isNameValid = true;
+		if (isFileNameValid(filename)) {
+			break;
+		}
+	}
+
+	while (true) {
+		filepath = getStringUserInput("Input path to file: ");
+
+		if (isFilePathValid(filepath + filename)) {
+			break;
 		}
 	}
 

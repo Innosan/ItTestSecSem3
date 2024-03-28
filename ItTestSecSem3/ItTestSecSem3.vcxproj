@@ -133,6 +133,9 @@
     <ClCompile Include="inputs.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuOption.cpp" />
+    <ClCompile Include="TestCase.cpp" />
+    <ClCompile Include="testMain.cpp" />
+    <ClCompile Include="TestResult.cpp" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="validation.cpp" />
   </ItemGroup>
@@ -142,6 +145,9 @@
     <ClInclude Include="LongestSubstring.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MenuOption.h" />
+    <ClInclude Include="TestCase.h" />
+    <ClInclude Include="testMain.h" />
+    <ClInclude Include="TestResult.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="validation.h" />
   </ItemGroup>

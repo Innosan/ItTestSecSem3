@@ -7,38 +7,60 @@
 #include "files.h"
 #include "validation.h"
 #include "inputs.h"
+#include "testMain.h"
 #include "LongestSubstring.h"
 
 
 void Menu::initializeMenu() {
 	vector<MenuOption> items = {
 		// Add mammal
-		MenuOption(this->SINGLE_LINE, "Get texts from single line",  []() {
-			std::string str1 = "I suck my lolipop, but i'm not sick. Tommorrow i will be boss of the gym.";
-			std::string str2 = "I suck, but i'm not sick. Today he'll will be my boss of the class.";
+		MenuOption(this->SINGLE_LINE, "Input single line texts",  []() {
+			std::string str1 = getStringUserInput("Input first text:");
+			std::string str2 = getStringUserInput("Input second text:");
 
 			auto result = LongestSubstring::getLongestSubstring(str1, str2);
+
 			result.print();
 		}),
 
-		MenuOption(this->MULTI_LINE, "Get texts from single line",  []() {
-			std::string firstUserText = convertToString(getMultilineString("Input first text: "));
-			std::string secondUserText = convertToString(getMultilineString("Input second text: "));
+		MenuOption(this->MULTI_LINE, "Input multiline texts",  []() {
+			std::vector<std::string> firstUserText = getMultilineString("Input first text (end with double ENTER): ");
+			std::vector<std::string> secondUserTest = getMultilineString("Input second text (end with double ENTER): ");
+			
+			auto result = LongestSubstring::getLongestSubstring(convertToString(firstUserText), convertToString(secondUserTest));
 
-			auto result = LongestSubstring::getLongestSubstring(firstUserText, secondUserText);
 			result.print();
 		}),
 
 		// Read from file
 		MenuOption(this->READ_FROM_FILE, "Read texts from files",  []() {
-			string firstFilePath = getValidFilePath();
-			string secondFilePath = getValidFilePath();
+			string firstFilePath = "";
+			while (true) {
+				firstFilePath = getValidFilePath();
+				if (fileExists(firstFilePath)) {
+					break;
+				}
+				cout << "File does not exist. Please enter a new path." << endl;
+			}
+
+			string secondFilePath = "";
+			while (true) {
+				secondFilePath = getValidFilePath();
+				if (fileExists(secondFilePath)) {
+					break;
+				}
+				cout << "File does not exist. Please enter a new path." << endl;
+			}
 
 			vector<string> firstFileText = getTextFromFile(firstFilePath);
 			vector<string> secondFileText = getTextFromFile(secondFilePath);
 
 			auto result = LongestSubstring::getLongestSubstring(convertToString(firstFileText), convertToString(secondFileText));
 			result.print();
+		}),
+
+		MenuOption(this->RUN_TESTS, "Run tests",  []() {
+			testMain();
 		}),
 
 		// Exit

@@ -29,6 +29,21 @@ class LongestSubstring
 			std::cout << "Second string start position: " << secondStartPos << std::endl;
 		};
 
+		// Getters
+		size_t getFirstStartPos() const {
+			return firstStartPos;
+		}
+		size_t getSecondStartPos() const {
+			return secondStartPos;
+		}
+		size_t getLength() const {
+			return length;
+		}
+
+		std::string getSubstring() const {
+			return substring;
+		}
+
 		/**
 		 * Function to find the longest common substring in two strings.
 		 * 

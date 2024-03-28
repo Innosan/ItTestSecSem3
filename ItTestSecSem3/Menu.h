@@ -20,6 +20,7 @@ public:
 		SINGLE_LINE = 1,
 		MULTI_LINE,
 		READ_FROM_FILE,
+		RUN_TESTS,
 		EXIT,
 	};
 

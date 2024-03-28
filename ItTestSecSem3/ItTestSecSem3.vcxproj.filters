@@ -25,6 +25,18 @@
     <Filter Include="Models\LongestSubstring">
       <UniqueIdentifier>{7b5e3bd2-d1ae-4461-8005-ef456eed9b5f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Testing">
+      <UniqueIdentifier>{a3cd387b-9190-4a30-aa7c-bb5c6097eb67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Files">
+      <UniqueIdentifier>{9cfcf699-9240-40ed-96de-99e585519eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\Inputs">
+      <UniqueIdentifier>{ba4411d0-d368-4d9d-97be-c87f9f902c55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Testing\Models">
+      <UniqueIdentifier>{98372b97-5566-4f7d-a662-6649f8015354}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ItTestSecSem3.cpp">
@@ -36,9 +48,6 @@
     <ClCompile Include="MenuOption.cpp">
       <Filter>Menu</Filter>
     </ClCompile>
-    <ClCompile Include="inputs.cpp">
-      <Filter>Utility</Filter>
-    </ClCompile>
     <ClCompile Include="utils.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
@@ -46,10 +55,22 @@
       <Filter>Models\LongestSubstring</Filter>
     </ClCompile>
     <ClCompile Include="files.cpp">
-      <Filter>Utility</Filter>
+      <Filter>Utility\Files</Filter>
     </ClCompile>
     <ClCompile Include="validation.cpp">
-      <Filter>Utility</Filter>
+      <Filter>Utility\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputs.cpp">
+      <Filter>Utility\Inputs</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCase.cpp">
+      <Filter>Testing\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="TestResult.cpp">
+      <Filter>Testing\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="testMain.cpp">
+      <Filter>Testing</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,9 +80,6 @@
     <ClInclude Include="MenuOption.h">
       <Filter>Menu</Filter>
     </ClInclude>
-    <ClInclude Include="inputs.h">
-      <Filter>Utility</Filter>
-    </ClInclude>
     <ClInclude Include="utils.h">
       <Filter>Utility</Filter>
     </ClInclude>
@@ -69,10 +87,22 @@
       <Filter>Models\LongestSubstring</Filter>
     </ClInclude>
     <ClInclude Include="files.h">
-      <Filter>Utility</Filter>
+      <Filter>Utility\Files</Filter>
     </ClInclude>
     <ClInclude Include="validation.h">
-      <Filter>Utility</Filter>
+      <Filter>Utility\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputs.h">
+      <Filter>Utility\Inputs</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCase.h">
+      <Filter>Testing\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="TestResult.h">
+      <Filter>Testing\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="testMain.h">
+      <Filter>Testing</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
